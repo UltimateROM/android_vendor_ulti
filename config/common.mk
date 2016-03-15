@@ -2,7 +2,7 @@
 
 # Superuser
 SUPERUSER_EMBEDDED := true
-SUPERUSER_PACKAGE_PREFIX := com.android.settings.fml.superuser
+SUPERUSER_PACKAGE_PREFIX := com.android.settings.ulti.superuser
 
 PRODUCT_PACKAGES += \
 	Superuser \
@@ -13,11 +13,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Boot animation
 PRODUCT_COPY_FILES += \
-	vendor/fml/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+	vendor/ulti/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 
-# FML init.rc
+# ulti init.rc
 PRODUCT_COPY_FILES += \
-	vendor/fml/prebuilt/common/etc/init.fml.rc:root/init.fml.rc
+	vendor/ulti/prebuilt/common/etc/init.ulti.rc:root/init.ulti.rc
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -36,8 +36,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # init.d support
 PRODUCT_COPY_FILES += \
-	vendor/fml/prebuilt/common/bin/sysinit:system/bin/sysinit \
-	vendor/fml/prebuilt/common/etc/init.d/00fml:system/etc/init.d/00fml
+	vendor/ulti/prebuilt/common/bin/sysinit:system/bin/sysinit \
+	vendor/ulti/prebuilt/common/etc/init.d/00ulti:system/etc/init.d/00ulti
 
 # Extra tools in CM
 PRODUCT_PACKAGES = \
@@ -97,4 +97,4 @@ ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
 endif
 
 # overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/fml/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/ulti/overlay/common
