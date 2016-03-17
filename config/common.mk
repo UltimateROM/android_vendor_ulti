@@ -39,58 +39,6 @@ PRODUCT_COPY_FILES += \
 	vendor/ulti/prebuilt/common/bin/sysinit:system/bin/sysinit \
 	vendor/ulti/prebuilt/common/etc/init.d/00ulti:system/etc/init.d/00ulti
 
-# Extra tools in CM
-PRODUCT_PACKAGES = \
-    mke2fs \
-    tune2fs \
-    mkfs.f2fs \
-    fsck.f2fs \
-    fibmap.f2fs \
-    gdbserver \
-    micro_bench \
-    oprofiled \
-    sqlite3 \
-    strace \
-    audio_effects.conf \
-    libcyanogen-dsp \
-    
-
-WITH_EXFAT ?= true
-ifeq ($(WITH_EXFAT),true)
-TARGET_USES_EXFAT := true
-PRODUCT_PACKAGES = \
-    mount.exfat \
-    fsck.exfat \
-    mkfs.exfat
-endif
-
-# Openssh
-PRODUCT_PACKAGES += \
-    scp \
-    sftp \
-    ssh \
-    sshd \
-    sshd_config \
-    ssh-keygen \
-    start-ssh
-
-# rsync
-PRODUCT_PACKAGES += \
-    rsync
-
-
-PRODUCT_PACKAGES += \
-	CellBroadcastReceiver \
-        Apollo \
-	Launcher3 \
-	libffmpeg_extractor \
-	libffmpeg_omx \
-	media_codecs_ffmpeg.xml
-
-PRODUCT_PROPERTY_OVERRIDES += \
-	media.sf.omx-plugin=libffmpeg_omx.so \
-	media.sf.extractor-plugin=libffmpeg_extractor.so
-
 # Chromium Prebuilt
 ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
 -include prebuilts/chromium/$(TARGET_DEVICE)/chromium_prebuilt.mk
