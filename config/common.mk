@@ -113,15 +113,18 @@ PRODUCT_PACKAGES += \
 
 # Custom Ulti packages
 PRODUCT_PACKAGES += \
+    LatinIME \
     Launcher3 \
-    AudioFX \
     CMFileManager \
     Eleven \
     LockClock \
-    CMUpdater \
-    ExactCalculator
+    ExactCalculator \
+    ViPER4Android \
+    libv4a_fx_ics
 
-# Extra tools in CM
+VIPER4ANDROID_MODE := NEON
+
+# Extra tools in Ulti
 PRODUCT_PACKAGES += \
     libsepol \
     mke2fs \
@@ -146,6 +149,15 @@ PRODUCT_PACKAGES += \
     fsck.exfat \
     mkfs.exfat
 endif
+
+# Superuser
+ifneq ($(TARGET_NO_SUPERUSER),true)
+
+PRODUCT_PACKAGES += \
+    su
+
+endif
+
 
 # Openssh
 PRODUCT_PACKAGES += \
