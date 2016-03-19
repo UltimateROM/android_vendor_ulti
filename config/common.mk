@@ -107,6 +107,10 @@ PRODUCT_PACKAGES += \
     libemoji \
     Terminal
 
+# Stlport
+PRODUCT_PACKAGES += \
+    libstlport
+
 # Include librsjni explicitly to workaround GMS issue
 PRODUCT_PACKAGES += \
     librsjni
@@ -114,6 +118,7 @@ PRODUCT_PACKAGES += \
 # Custom Ulti packages
 PRODUCT_PACKAGES += \
     LatinIME \
+    STweaks \
     Launcher3 \
     CMFileManager \
     Eleven \
