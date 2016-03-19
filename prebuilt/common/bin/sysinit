@@ -1,6 +1,13 @@
 #!/system/bin/sh
 
 export PATH=/sbin:/system/sbin:/system/bin:/system/xbin
+
+if ! test -d /data/cache ; then
+    busybox mkdir -p /data/cache
+fi
+busybox mount -o remount,rw /
+busybox mount -o bind /data/cache /cache
+
 for i in /system/etc/init.d/*; do
     if [ -x $i ]; then
         /system/bin/log -t sysinit Running $i
