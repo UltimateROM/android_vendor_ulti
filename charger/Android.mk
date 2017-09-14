@@ -20,7 +20,9 @@ LOCAL_MODULE := libhealthd.lineage
 LOCAL_CFLAGS := -Werror
 LOCAL_C_INCLUDES := \
     system/core/healthd/include \
+    bootable/recovery/minui/include \
     bootable/recovery
+    LOCAL_CFLAGS += -DCHARGER
 ifneq ($(BACKLIGHT_PATH),)
     LOCAL_CFLAGS += -DHEALTHD_BACKLIGHT_PATH=\"$(BACKLIGHT_PATH)\"
 endif

@@ -33,7 +33,7 @@
 #include <cutils/properties.h>
 
 #include <pthread.h>
-#include <linux/android_alarm.h>
+//#include <linux/android_alarm.h>
 #include <sys/timerfd.h>
 #include <linux/rtc.h>
 
