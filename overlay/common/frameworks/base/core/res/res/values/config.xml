@@ -25,6 +25,7 @@
     <bool name="config_cellBroadcastAppLinks">true</bool>
 
     <!-- Disable stock OTA components if installed -->
+<!--
     <string-array name="config_disabledComponents" translatable="false">
         <item>com.google.android.gsf/com.google.android.gsf.update.SystemUpdateActivity</item>
         <item>com.google.android.gsf/com.google.android.gsf.update.SystemUpdateService$Receiver</item>
@@ -36,16 +37,16 @@
         <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService$SecretCodeReceiver</item>
         <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateServiceReceiver</item>
     </string-array>
-
+-->
     <!-- Force enabling of some services that could have been previously disabled -->
+<!--
     <string-array name="config_forceEnabledComponents" translatable="false">
         <item>com.google.android.gsf/com.google.android.gsf.update.SystemUpdateService</item>
         <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService</item>
     </string-array>
-
+-->
     <string name="config_mms_user_agent">CyanogenMod</string>
     <string name="config_mms_user_agent_profile_url">http://www.google.com/oha/rdf/ua-profile-kila.xml</string>
-
     <!-- Defines the default set of global actions. Actions may still be disabled or hidden based
          on the current state of the device. -->
     <string-array translatable="false" name="config_globalActionsList">
@@ -55,13 +56,12 @@
         <item>bugreport</item>
         <item>users</item>
     </string-array>
-
     <!-- Enable lockscreen rotation by default -->
     <bool name="config_enableLockScreenRotation">true</bool>
-
     <!-- Whether to persist the notification for when a usb drive device is plugged in -->
+<!--
     <bool name="config_persistUsbDriveNotification">true</bool>
-
+-->
     <!-- Set this to true to enable the platform's auto-power-save modes like doze and
          app standby.  These are not enabled by default because they require a standard
          cloud-to-device messaging service for apps to interact correctly with the modes
@@ -69,5 +69,5 @@
          dozing).  This should be enabled if you have such services and expect apps to
          correctly use them when installed on your device.  Otherwise, keep this disabled
          so that applications can still use their own mechanisms. -->
-    <bool name="config_enableAutoPowerModes">true</bool>
+       <bool name="config_enableAutoPowerModes">true</bool> 
 </resources>
