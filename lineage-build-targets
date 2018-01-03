@@ -1,0 +1,5 @@
+# LineageOS build target list
+# <device> <build_type> <branch name> [period: "W"eekly] <Day: 1 Monday - 7 Sunday>
+
+# Weekly lineage-15.0
+codina userdebug lineage-15.0 W 1
